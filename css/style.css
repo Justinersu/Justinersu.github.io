@@ -1,0 +1,44 @@
+:root {
+    --jaune: #FEFAA3;
+    --orange: #FFD296;
+    --bleu: #85BFF3;
+    --rose: #FFBDF8;
+    --vert: #8FE2C9;
+    --gris: #363636;
+}
+
+/* Navigation */
+.navbar {
+    position: sticky;
+    font-family: "Fira Code", monospace;
+    padding: 2rem;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.titre_page {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+.nom {
+    font-family: "Montserrat";
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 0;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    background-color: var(--jaune);
+}
+
+.sous-titre {
+    font-family: "Fira Code", monospace;
+    line-height: 0;
+    text-align: right;
+    font-size: 2rem;
+}
