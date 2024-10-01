@@ -1,220 +1,230 @@
 :root {
-    --jaune: #FEFAA3;
-    --orange: #FFD296;
-    --bleu: #85BFF3;
-    --rose: #FFBDF8;
-    --vert: #8FE2C9;
-    --gris: #363636;
+  --jaune: #fefaa3;
+  --orange: #ffd296;
+  --bleu: #85bff3;
+  --rose: #ffbdf8;
+  --vert: #8fe2c9;
+  --gris: #363636;
 }
 
-/* Généraux*/
+/*---------- Début Styles Généraux ----------*/
 body {
-    margin: 0 15vw 0 15vw;
-    display: flex;
-    flex-direction: row;
-    column-gap: 100px;
-    justify-content: center;
+  /*margin: 0 15vw 0 15vw;*/
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+  justify-content: center;
 }
 
-@media screen and (min-width: 2200px) { 
-    body {
-        margin: 0 25vw 0 25vw;
-    }
- }
+/*@media screen and (min-width: 2200px) {
+  body {
+    margin: 0 25vw 0 25vw;
+  }
+}*/
 
 .container {
-    position: relative;
-    top: 80vh;
+  position: relative;
+  top: 80vh;
+  width: 100vw;
+  max-width: 1000px;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 h1 {
-    font-family: "Montserrat";
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 0.5;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    height: 40px;
+  font-family: "Montserrat";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  height: 40px;
 }
 
 h1 span {
-    background-color: var(--jaune);
+  background-color: var(--jaune);
 }
 
 h2 {
-    font-family: "Fira Code", monospace;
-    line-height: 0;
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 80px;
+  font-family: "Fira Code", monospace;
+  line-height: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 80px;
 }
 
 h2 span {
-    background-color: var(--jaune);
+  background-color: var(--jaune);
 }
 
-.a_propos, .projets {
-    margin: 15vh 0 5vh 0;
+.a_propos,
+.projets {
+  margin: 15vh 0 5vh 0;
 }
+/*---------- Fin Styles Généraux ----------*/
 
-/* Navigation */
+/*---------- Début Navigation ----------*/
 .navbar {
-    position: sticky;
-    top: 5vh;
-    align-self: flex-start;
-    font-family: "Fira Code", monospace;
-    font-size: 1.5rem;
-    white-space: nowrap;
+  position: sticky;
+  top: 5vh;
+  align-self: flex-start;
+  font-family: "Fira Code", monospace;
+  font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .navbar p {
-    margin: 25px;
+  margin: 25px;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar a:hover {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
+/*---------- Fin Navigation ----------*/
 
-/* Héro */
+/*---------- Début titre de page ----------*/
 .titre_page {
-    text-align: right;
+  text-align: right;
 }
+/*---------- Fin titre de page ----------*/
 
-/* Présentation */
+/*---------- Début À propos ----------*/
 .presentation {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .a_propos p {
-    font-family: "Montserrat";
-    font-size: 1.2rem;
-    line-height: 1.5;
-    letter-spacing: 2px;
-    font-weight: 350;
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  font-weight: 350;
 }
 
 .presentation img {
-    width: 40%;
-    margin-left: 2rem;
+  width: 40%;
+  margin-left: 2rem;
 }
 
 .presentation #web {
-    background-color: var(--vert);
+  background-color: var(--vert);
 }
 
 .presentation #design {
-    background-color: var(--orange);
+  background-color: var(--orange);
 }
 
 .competences {
-    margin-top: 50px;
-    width: 100%;
-    display: block;
+  margin-top: 50px;
+  width: 100%;
+  display: block;
 }
+/*---------- Fin À propos ----------*/
 
-/* Projets */
+/*---------- Début Projets ----------*/
 #projets h2 {
-    margin: 15vh 0 5vh 0;
-}
-.cartes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
+  margin: 15vh 0 5vh 0;
 }
 
-@media screen and (max-width: 1350px) { 
-    .cartes {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    }
- }
+.cartes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+
+@media screen and (max-width: 1350px) {
+  .cartes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
 
 .carteProjet {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 35px;
-    gap: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  gap: 20px;
 }
 
 .carteProjet h3 {
-    font-family: "Montserrat";
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 0;
-    align-self: center;
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  align-self: center;
 }
 
 .img_projet {
-    width: 100%;
-    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.4);
 }
 
 .fleches {
-    align-self: flex-end;
-    margin-top: -5px;
+  align-self: flex-end;
+  margin-top: -5px;
 }
 
 .fleches img {
-    width: 18px;
+  width: 18px;
 }
 
 .fleches img:nth-child(1) {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .fleches img:hover {
-    cursor: pointer;
-    opacity: 50%;
+  cursor: pointer;
+  opacity: 50%;
 }
 
 .carteProjet p {
-    font-family: "Montserrat";
-    font-size: 1rem;
+  font-family: "Montserrat";
+  font-size: 1rem;
 }
 
-.roles, .check {
-    font-weight: 700;
+.roles,
+.check {
+  font-weight: 700;
 }
 
 .check:before {
-    content: url("../assets/checkbox.png");
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-    margin-right: 10px;
+  content: url("../assets/checkbox.png");
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  margin-right: 10px;
 }
 
 .carteProjet p {
-    width: 90%;
+  width: 90%;
 }
 
 .carteProjet:nth-child(1) {
-    background-color: var(--bleu);
+  background-color: var(--bleu);
 }
 
 .carteProjet:nth-child(2) {
-    background-color: var(--vert);
+  background-color: var(--vert);
 }
 
 .carteProjet:nth-child(3) {
-    background-color: var(--rose);
+  background-color: var(--rose);
 }
 
 .carteProjet:nth-child(4) {
-    background-color: var(--orange);
+  background-color: var(--orange);
 }
+/*---------- Fin Projets ----------*/
