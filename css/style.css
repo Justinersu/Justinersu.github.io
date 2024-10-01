@@ -15,16 +15,14 @@
   flex-direction: row;
   column-gap: 100px;
   justify-content: center;
-  overflow: hidden;
 }
 
 main {
+  margin-top: 78vh;
   position: relative;
-  top: 80vh;
   width: 100vw;
   max-width: 1000px;
-  padding-bottom: 100px;
-
+  padding-bottom: 150px;
 }
 
 p {
@@ -38,7 +36,8 @@ h1 {
   line-height: 0.5;
   text-transform: uppercase;
   letter-spacing: 6px;
-  height: 40px;
+  height: 40px; 
+  white-space: nowrap;
 }
 
 h1 span {
@@ -61,6 +60,12 @@ h2 span {
 .projets {
   margin: 15vh 0 5vh 0;
 }
+
+@media screen and (max-width: 880px) {
+    .navbar {
+        display: none;
+    }
+  }
 /*---------- Fin Styles Généraux ----------*/
 
 /*---------- Début Navigation ----------*/
@@ -157,7 +162,7 @@ h2 span {
 
 .carteProjet h3 {
   font-family: "Montserrat";
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -237,16 +242,26 @@ h2 span {
     padding-bottom: 25px;
 }*/
 
-footer img {
-    width: 20px;
-}
-
 footer {
     position: absolute;
     bottom: 0;
     text-align: center;
-    margin: 0;
     width: 100%;
+    padding-bottom: 35px;
+    font-family: "Fira Code", monospace;
+    letter-spacing: 3px;
+}
+
+footer img {
+    width: 30px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+footer p span {
+    text-decoration: underline;
 }
 
 /*---------- Fin Pied de page ----------*/
