@@ -116,3 +116,17 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Projets */
+.cartes {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.carteProjet {
+    width: auto;
+    height: 500px;
+    background-color: red;
+}
