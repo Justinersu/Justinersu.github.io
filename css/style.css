@@ -8,35 +8,39 @@
 }
 
 /*---------- Début Styles Généraux ----------*/
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
 .container {
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: row;
-  column-gap: 100px;
   justify-content: center;
+  column-gap: 100px;
+  margin: 0 40px 40px 40px;
 }
 
 main {
-  margin-top: 78vh;
   position: relative;
   width: 100vw;
-  max-width: 1000px;
+  max-width: 800px;
   padding-bottom: 150px;
-}
-
-p {
-  margin: 0;
 }
 
 h1 {
   font-family: "Montserrat";
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 0.5;
   text-transform: uppercase;
   letter-spacing: 6px;
-  height: 40px; 
+  height: 40px;
   white-space: nowrap;
 }
 
@@ -47,9 +51,9 @@ h1 span {
 h2 {
   font-family: "Fira Code", monospace;
   line-height: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 h2 span {
@@ -62,16 +66,25 @@ h2 span {
 }
 
 @media screen and (max-width: 880px) {
-    .navbar {
-        display: none;
-    }
+  .navbar {
+    display: none;
   }
+  .presentation img {
+    display: none;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
 /*---------- Fin Styles Généraux ----------*/
 
 /*---------- Début Navigation ----------*/
 .navbar {
   position: sticky;
-  top: 5vh;
+  top: 4vh;
   align-self: flex-start;
   font-family: "Fira Code", monospace;
   font-size: 1.5rem;
@@ -79,7 +92,7 @@ h2 span {
 }
 
 .navbar p {
-  margin: 25px;
+  margin: 25px 0 25px 0;
 }
 
 .navbar a {
@@ -94,8 +107,19 @@ h2 span {
 /*---------- Fin Navigation ----------*/
 
 /*---------- Début titre de page ----------*/
+.titre_container {
+  position: relative;
+  height: 100vh;
+}
 .titre_page {
+  position: absolute;
   text-align: right;
+  right: 0;
+  bottom: 4vh;
+}
+
+.titre_page h2 {
+  margin-top: 20px;
 }
 /*---------- Fin titre de page ----------*/
 
@@ -114,7 +138,7 @@ h2 span {
 }
 
 .presentation img {
-  width: 40%;
+  width: 35%;
   margin-left: 2rem;
 }
 
@@ -127,17 +151,17 @@ h2 span {
 }
 
 .competences {
+  overflow: auto;
   margin-top: 50px;
+  padding: 10px;
+}
+
+.competences img {
   width: 100%;
-  display: block;
 }
 /*---------- Fin À propos ----------*/
 
 /*---------- Début Projets ----------*/
-#projets h2 {
-  margin: 15vh 0 5vh 0;
-}
-
 .cartes {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -145,7 +169,7 @@ h2 span {
   gap: 15px;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1000px) {
   .cartes {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -162,7 +186,7 @@ h2 span {
 
 .carteProjet h3 {
   font-family: "Montserrat";
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -243,25 +267,25 @@ h2 span {
 }*/
 
 footer {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 35px;
-    font-family: "Fira Code", monospace;
-    letter-spacing: 3px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-family: "Fira Code", monospace;
+  letter-spacing: 2px;
+  margin-bottom: 20px
 }
 
 footer img {
-    width: 30px;
+  width: 30px;
 }
 
 footer p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 footer p span {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /*---------- Fin Pied de page ----------*/
