@@ -188,7 +188,7 @@ a:hover {
   position: absolute;
   top: 0;
   right: 0;
-  width: 3.5%;
+  width: 3%;
   z-index: 1;
   cursor: pointer;
 }
@@ -220,11 +220,15 @@ a:hover {
     rotate: 90deg;
     width: 90vh;
     max-height: 90vw;
-    grid-template-columns: 105%;
+    grid-template-columns: 100%;
   }
   .fullscreen #imgFullscreen {
     width: 80%;
     height: auto;
+  }
+  .fullscreen #btnFermer {
+    left: 25px;
+    width: 4.5%;
   }
 }
 
@@ -303,13 +307,18 @@ a:hover {
   width: 18px;
 }
 
+@media screen and (orientation: portrait) {
+  .fleches img {
+    width: 100px;
+    height: 48px;
+    object-fit: contain;
+    white-space: nowrap;
+  }
+}
+
 @media screen and (max-width: 880px) {
   .fleches {
     align-self: center;
-  }
-  .fleches img {
-    width: 28px;
-    padding: 0 20px;
   }
 }
 
