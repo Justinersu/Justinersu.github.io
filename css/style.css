@@ -122,7 +122,6 @@ a:hover {
   left: 40px;
   width: 48px;
   z-index: 2;
-
 }
 
 .icone-menu-burger:hover {
@@ -130,6 +129,7 @@ a:hover {
 }
 
 .menu-burger {
+  display: none;
   justify-content: center;
   gap: 120px;
   align-items: center;
