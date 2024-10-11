@@ -68,10 +68,13 @@ updateScene();
 
 // ----- Fullscreen -----
 let body = document.querySelector("body");
+
 let btnFullscreen = document.getElementById("btnFullscreen");
 const fullscreen = document.querySelector(".fullscreen_container");
 let btnFermer = document.getElementById("btnFermer");
 let imgFullscreen = document.getElementById("imgFullscreen");
+
+let btnFullscreenPortrait = document.getElementById("btnFullscreenPortrait");
 
 function appearFullscreen() {
     imgFullscreen.setAttribute('src', scenes[currentIndexScene]);
@@ -79,11 +82,20 @@ function appearFullscreen() {
     fullscreen.style.display = "flex";
 }
 
+function appearFullscreenPortrait() {
+    imgFullscreen.setAttribute('src', portraits[currentIndexPortrait]);
+    body.classList.add('stop-scrolling');
+    fullscreen.style.display = "flex";
+}
+
+
 function noFullscreen() {
     body.classList.remove('stop-scrolling');
     fullscreen.style.display = "none";
 }
 
 btnFullscreen.addEventListener("click", appearFullscreen)
+
+btnFullscreenPortrait.addEventListener("click", appearFullscreenPortrait)
 
 btnFermer.addEventListener("click", noFullscreen)
