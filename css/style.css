@@ -237,7 +237,7 @@ a:hover {
 
 @media screen and (max-width: 1350px) {
   .fullscreen #imgFullscreen {
-    height: 40vw;
+    height: 90vh;
   }
 }
 
