@@ -237,14 +237,7 @@ a:hover {
 
 @media screen and (max-width: 1350px) {
   .fullscreen #imgFullscreen {
-    height: 50vw;
-  }
-  .btnNextFullscreen {
-    gap: 92vw;
-  }
-
-  .btnNextFullscreen img {
-    width: 24px;
+    height: 40vw;
   }
 }
 
