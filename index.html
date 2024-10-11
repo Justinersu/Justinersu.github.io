@@ -112,7 +112,7 @@
             <!---------- Générique 2D ---------->
             <div class="carteProjet">
               <h3>Générique 2D</h3>
-              <video class="img_projet" controls>
+              <video class="img_projet" loop autoplay>
                 <source src="./assets/generique_2D.mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -143,7 +143,8 @@
               <div class="carteContent">
                 <img id="btnFullscreen" src="./assets/icone_fullscreen.png" />
                 <img
-                  class="img_projet" id="imgScene"
+                  class="img_projet"
+                  id="imgScene"
                   src="./assets/projet_3d/rendu_global.jpg"
                 />
               </div>
@@ -167,11 +168,11 @@
       </main>
 
       <!---------- Fullscreen Images ---------->
-      <div class="fullscreen">
-        <img id="btnFermer" src="./assets/icone_fermer.png">
-        <img
-          id="imgFullscreen"
-        />
+      <div class="fullscreen_container">
+        <div class="fullscreen">
+          <img id="imgFullscreen" />
+          <img id="btnFermer" src="./assets/icone_fermer.png" />
+        </div>
       </div>
 
       <!---------- Pied de page ---------->

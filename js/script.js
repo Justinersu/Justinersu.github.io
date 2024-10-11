@@ -69,14 +69,14 @@ updateScene();
 // ----- Fullscreen -----
 let body = document.querySelector("body");
 let btnFullscreen = document.getElementById("btnFullscreen");
-const fullscreen = document.querySelector(".fullscreen");
+const fullscreen = document.querySelector(".fullscreen_container");
 let btnFermer = document.getElementById("btnFermer");
 let imgFullscreen = document.getElementById("imgFullscreen");
 
 function appearFullscreen() {
     imgFullscreen.setAttribute('src', scenes[currentIndexScene]);
     body.classList.add('stop-scrolling');
-    fullscreen.style.display = "block";
+    fullscreen.style.display = "flex";
 }
 
 function noFullscreen() {
