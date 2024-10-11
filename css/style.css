@@ -153,6 +153,16 @@ a:hover {
   color: #000;
 }
 
+.menu-burger .email-telephone {
+  display: flex;
+  flex-direction: row;
+  gap: 30px
+}
+
+.menu-burger .email-telephone img {
+  width: 80px;
+}
+
 .icone-menu-burger-x {
   position: absolute;
   top: 30px;
@@ -326,7 +336,7 @@ a:hover {
     gap: 80vh;
   }
   .btnNextFullscreen img {
-    width: 46px;
+    width: 40px;
   }
   
 }
