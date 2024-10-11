@@ -131,7 +131,7 @@ a:hover {
 .menu-burger {
   display: none;
   justify-content: center;
-  gap: 120px;
+  gap: 100px;
   align-items: center;
   flex-direction: column;
   position: sticky;
@@ -160,7 +160,7 @@ a:hover {
 }
 
 .menu-burger .email-telephone img {
-  width: 80px;
+  width: 12vw;
 }
 
 .icone-menu-burger-x {
