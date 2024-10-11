@@ -100,3 +100,22 @@ function noFullscreen() {
 btnFullscreen.addEventListener("click", () => appearFullscreen(false));
 btnFullscreenPortrait.addEventListener("click", () => appearFullscreen(true));
 btnFermer.addEventListener("click", noFullscreen);
+
+// ------ Menu burger ------
+const iconeBurger = document.querySelector(".icone-menu-burger");
+const iconeFermerBurger = document.querySelector(".icone-menu-burger-x");
+const menuBurger = document.querySelector(".menu-burger");
+const liensBurger = document.querySelectorAll("div.menu-burger > a");
+
+function openBurger() {
+    menuBurger.style.display = "flex";
+}
+
+function fermerBurger() {
+    menuBurger.style.display = "none";
+}
+
+iconeBurger.addEventListener("click", openBurger);
+iconeFermerBurger.addEventListener("click", fermerBurger);
+liensBurger.addEventListener("click", fermerBurger);
+
