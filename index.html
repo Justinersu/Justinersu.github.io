@@ -18,11 +18,11 @@
   <body>
     <div class="container">
       <!---------- Navigation ---------->
-      <header class="navbar">
+      <nav class="navbar">
         <p><a href="#">accueil</a></p>
-        <p><a href="#a_propos">à propos</a></p>
+        <p><a href="#aPropos">à propos</a></p>
         <p><a href="#projets">projets</a></p>
-      </header>
+      </nav>
 
       <!---------- Contenu principal ---------->
       <main>
@@ -35,7 +35,7 @@
         </div>
 
         <!---------- À propos ----------->
-        <div id="a_propos" class="a_propos">
+        <div id="aPropos" class="a_propos">
           <h2><span>à propos</span></h2>
           <div class="presentation">
             <p>
@@ -64,7 +64,11 @@
             <div class="carteProjet">
               <h3>Portrait</h3>
               <div class="carteContent">
-                <img class="btnFullscreen" id="btnFullscreenPortrait" src="./assets/icone_fullscreen.png" />
+                <img
+                  class="btnFullscreen"
+                  id="btnFullscreenPortrait"
+                  src="./assets/icone_fullscreen.png"
+                />
                 <img
                   class="img_projet"
                   id="imgPortrait"
@@ -144,7 +148,11 @@
             <div class="carteProjet">
               <h3>Scène 3D</h3>
               <div class="carteContent">
-                <img class="btnFullscreen" id="btnFullscreen" src="./assets/icone_fullscreen.png" />
+                <img
+                  class="btnFullscreen"
+                  id="btnFullscreen"
+                  src="./assets/icone_fullscreen.png"
+                />
                 <img
                   class="img_projet"
                   id="imgScene"
@@ -152,8 +160,8 @@
                 />
               </div>
               <div class="fleches">
-                <img id="btnSceneDroit" src="./assets/fleche_gauche.png" />
-                <img id="btnSceneGauche" src="./assets/fleche_droite.png" />
+                <img class="btnSceneDroit" src="./assets/fleche_gauche.png" />
+                <img class="btnSceneGauche" src="./assets/fleche_droite.png" />
               </div>
               <p>
                 Création d’une scène 3D à partir du thème d’une grotte magique.
@@ -175,6 +183,14 @@
         <div class="fullscreen">
           <img id="imgFullscreen" />
           <img id="btnFermer" src="./assets/icone_fermer.png" />
+        </div>
+        <div class="btnNextFullscreen flechesScene">
+          <img class="sceneFsGauche" src="./assets/fleche_gauche_blanc.png" />
+          <img class="sceneFsDroit" src="./assets/fleche_droite_blanc.png" />
+        </div>
+        <div class="btnNextFullscreen flechesPortrait">
+          <img class="portraitFsGauche" src="./assets/fleche_gauche_blanc.png" />
+          <img class="portraitFsDroit" src="./assets/fleche_droite_blanc.png" />
         </div>
       </div>
 

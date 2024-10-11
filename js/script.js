@@ -1,101 +1,102 @@
-// ------ Switcher entre les images ------
-let imgPortrait = document.getElementById("imgPortrait");
-let btnDroit = document.getElementById("btnDroit");
-let btnGauche = document.getElementById("btnGauche");
-
-let imgScene = document.getElementById("imgScene");
-let btnSceneDroit = document.getElementById("btnSceneDroit");
-let btnSceneGauche = document.getElementById("btnSceneGauche");
+// ------ Variables, arrays ------
+const imgPortrait = document.getElementById("imgPortrait");
+const btnDroit = document.getElementById("btnDroit");
+const btnGauche = document.getElementById("btnGauche");
+const imgScene = document.getElementById("imgScene");
+const btnSceneDroit = document.querySelector(".btnSceneDroit");
+const btnSceneGauche = document.querySelector(".btnSceneGauche");
+const sceneFsDroit = document.querySelector(".sceneFsDroit");
+const sceneFsGauche = document.querySelector(".sceneFsGauche");
+const portraitFsDroit = document.querySelector(".portraitFsDroit");
+const portraitFsGauche = document.querySelector(".portraitFsGauche");
+const body = document.querySelector("body");
+const btnFullscreen = document.getElementById("btnFullscreen");
+const fullscreen = document.querySelector(".fullscreen_container");
+const btnFermer = document.getElementById("btnFermer");
+const imgFullscreen = document.getElementById("imgFullscreen");
+const btnFullscreenPortrait = document.getElementById("btnFullscreenPortrait");
+const flechesPortrait = document.querySelector(".flechesPortrait");
+const flechesScene = document.querySelector(".flechesScene");
 
 const portraits = [
-    "./assets/projet_portrait/portrait_1_mode.jpg",
-    "./assets/projet_portrait/portrait_2_musique.jpg",
-    "./assets/projet_portrait/portrait_3_nature.jpg",
-    "./assets/projet_portrait/portrait_4_lecture.jpg",
-    "./assets/projet_portrait/portrait_5_jeux_video.jpg",
-    "./assets/projet_portrait/portrait_6_beaute.jpg",
-    "./assets/projet_portrait/signature.jpg",
-    "./assets/projet_portrait/moodboard_portrait.jpg",
-    "./assets/projet_portrait/moodboard_signature.jpg"
+  "./assets/projet_portrait/portrait_1_mode.jpg",
+  "./assets/projet_portrait/portrait_2_musique.jpg",
+  "./assets/projet_portrait/portrait_3_nature.jpg",
+  "./assets/projet_portrait/portrait_4_lecture.jpg",
+  "./assets/projet_portrait/portrait_5_jeux_video.jpg",
+  "./assets/projet_portrait/portrait_6_beaute.jpg",
+  "./assets/projet_portrait/signature.jpg",
+  "./assets/projet_portrait/moodboard_portrait.jpg",
+  "./assets/projet_portrait/moodboard_signature.jpg",
 ];
 
 const scenes = [
-    "./assets/projet_3d/rendu_global.jpg",
-    "./assets/projet_3d/rendu_coffre.jpg",
-    "./assets/projet_3d/rendu_lit.jpg",
-    "./assets/projet_3d/rendu_potion.jpg"
+  "./assets/projet_3d/rendu_global.jpg",
+  "./assets/projet_3d/rendu_coffre.jpg",
+  "./assets/projet_3d/rendu_lit.jpg",
+  "./assets/projet_3d/rendu_potion.jpg",
 ];
 
 let currentIndexPortrait = 0;
 let currentIndexScene = 0;
 
-function updateImage() {
-    imgPortrait.setAttribute('src', portraits[currentIndexPortrait]);
+// ------ Switcher entre les images ------
+function updateImage(imgElement, srcArray, index) {
+  imgElement.setAttribute("src", srcArray[index]);
 }
 
-function updateScene() {
-    imgScene.setAttribute('src', scenes[currentIndexScene]);
+function nextImage(array, index, increment) {
+  return (index + increment + array.length) % array.length;
 }
 
-function nextImgDroit() {
-    currentIndexPortrait = (currentIndexPortrait + 1) % portraits.length; // Va à la prochaine image
-    updateImage();
+function update() {
+  updateImage(imgPortrait, portraits, currentIndexPortrait);
+  updateImage(imgScene, scenes, currentIndexScene);
 }
 
-function nextImgGauche() {
-    currentIndexPortrait = (currentIndexPortrait - 1 + portraits.length) % portraits.length; // Va à l'image précédente
-    updateImage();
+function handlePortraitChange(increment) {
+  currentIndexPortrait = nextImage(portraits, currentIndexPortrait, increment);
+  updateImage(imgFullscreen, portraits, currentIndexPortrait);
+  update();
 }
 
-function nextSceneDroit() {
-    currentIndexScene = (currentIndexScene + 1) % scenes.length; // Va à la prochaine scène
-    updateScene();
+function handleSceneChange(increment) {
+  currentIndexScene = nextImage(scenes, currentIndexScene, increment);
+  updateImage(imgFullscreen, scenes, currentIndexScene);
+  update();
 }
 
-function nextSceneGauche() {
-    currentIndexScene = (currentIndexScene - 1 + scenes.length) % scenes.length; // Va à la scène précédente
-    updateScene();
-}
-
-btnDroit.addEventListener("click", nextImgDroit);
-btnGauche.addEventListener("click", nextImgGauche);
-btnSceneDroit.addEventListener("click", nextSceneDroit);
-btnSceneGauche.addEventListener("click", nextSceneGauche);
+btnDroit.addEventListener("click", () => handlePortraitChange(1));
+btnGauche.addEventListener("click", () => handlePortraitChange(-1));
+btnSceneDroit.addEventListener("click", () => handleSceneChange(1));
+btnSceneGauche.addEventListener("click", () => handleSceneChange(-1));
+sceneFsDroit.addEventListener("click", () => handleSceneChange(1));
+sceneFsGauche.addEventListener("click", () => handleSceneChange(-1));
+portraitFsDroit.addEventListener("click", () => handlePortraitChange(1));
+portraitFsGauche.addEventListener("click", () => handlePortraitChange(-1));
 
 // Initialiser la première image
-updateImage();
-updateScene();
+update();
 
-// ----- Fullscreen -----
-let body = document.querySelector("body");
-
-let btnFullscreen = document.getElementById("btnFullscreen");
-const fullscreen = document.querySelector(".fullscreen_container");
-let btnFermer = document.getElementById("btnFermer");
-let imgFullscreen = document.getElementById("imgFullscreen");
-
-let btnFullscreenPortrait = document.getElementById("btnFullscreenPortrait");
-
-function appearFullscreen() {
-    imgFullscreen.setAttribute('src', scenes[currentIndexScene]);
-    body.classList.add('stop-scrolling');
-    fullscreen.style.display = "flex";
+// ------ Fullscreen ------
+function appearFullscreen(isPortrait) {
+  updateImage(
+    imgFullscreen,
+    isPortrait ? portraits : scenes,
+    isPortrait ? currentIndexPortrait : currentIndexScene
+  );
+  body.classList.add("stop-scrolling");
+  fullscreen.style.display = "flex";
+  (isPortrait ? flechesPortrait : flechesScene).style.display = "flex";
 }
-
-function appearFullscreenPortrait() {
-    imgFullscreen.setAttribute('src', portraits[currentIndexPortrait]);
-    body.classList.add('stop-scrolling');
-    fullscreen.style.display = "flex";
-}
-
 
 function noFullscreen() {
-    body.classList.remove('stop-scrolling');
-    fullscreen.style.display = "none";
+  body.classList.remove("stop-scrolling");
+  fullscreen.style.display = "none";
+  flechesScene.style.display = "none";
+  flechesPortrait.style.display = "none";
 }
 
-btnFullscreen.addEventListener("click", appearFullscreen)
-
-btnFullscreenPortrait.addEventListener("click", appearFullscreenPortrait)
-
-btnFermer.addEventListener("click", noFullscreen)
+btnFullscreen.addEventListener("click", () => appearFullscreen(false));
+btnFullscreenPortrait.addEventListener("click", () => appearFullscreen(true));
+btnFermer.addEventListener("click", noFullscreen);

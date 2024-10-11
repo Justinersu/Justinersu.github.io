@@ -175,6 +175,15 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
+.fullscreen_container .flechesPortrait {
+  display: none;
+}
+
+.fullscreen_container .flechesScene {
+  display: none;
+}
+
 .fullscreen {
   position: fixed;
   width: auto;
@@ -208,12 +217,36 @@ a:hover {
   box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.9);
 }
 
+.btnNextFullscreen {
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  gap: 80vw;
+  left: -1.6%;
+}
+
+.btnNextFullscreen img {
+  width: 32px;
+}
+
+.btnNextFullscreen img:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1350px) {
   .fullscreen #imgFullscreen {
     height: 50vw;
   }
-}
+  .btnNextFullscreen {
+    gap: 92vw;
+  }
 
+  .btnNextFullscreen img {
+    width: 24px;
+  }
+}
 
 @media screen and (orientation: portrait) {
   .fullscreen {
@@ -230,6 +263,14 @@ a:hover {
     left: 25px;
     width: 4.5%;
   }
+  .btnNextFullscreen {
+    rotate: 90deg; 
+    gap: 80vh;
+  }
+  .btnNextFullscreen img {
+    width: 46px;
+  }
+  
 }
 
 .cartes {
