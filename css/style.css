@@ -350,13 +350,6 @@ a:hover {
   gap: 15px;
 }
 
-@media screen and (max-width: 1000px) {
-  .cartes {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-  }
-}
-
 .carteProjet {
   height: auto;
   display: flex;
@@ -418,10 +411,13 @@ a:hover {
 
 @media screen and (orientation: portrait) {
   .fleches img {
-    width: 100px;
+    width: 60px;
     height: 32px;
     object-fit: contain;
-    white-space: nowrap;
+  }
+  .fleches {
+    display: flex;
+    gap: 40px;
   }
 }
 
@@ -476,6 +472,16 @@ a:hover {
 
 .carteProjet:nth-child(4) {
   background-color: var(--orange);
+}
+
+@media screen and (max-width: 1000px) {
+  .cartes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .fleches img {
+    width: 18px;
+  }
 }
 /*---------- Fin Projets ----------*/
 
