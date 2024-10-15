@@ -272,7 +272,7 @@ a:hover {
   position: absolute;
   top: 0;
   right: 0;
-  width: 3%;
+  width: 2.5%;
   z-index: 1;
   cursor: pointer;
 }
@@ -297,12 +297,12 @@ a:hover {
   display: flex;
   position: absolute;
   justify-content: center;
-  gap: 80vw;
-  left: -1.5%;
+  gap: 75vw;
+  left: -1.8%;
 }
 
 .btnNextFullscreen img {
-  width: 24px;
+  width: 18px;
 }
 
 .btnNextFullscreen img:hover {
@@ -329,14 +329,14 @@ a:hover {
   }
   .fullscreen #btnFermer {
     left: 25px;
-    width: 4.5%;
+    width: 4%;
   }
   .btnNextFullscreen {
     rotate: 90deg; 
     gap: 80vh;
   }
   .btnNextFullscreen img {
-    width: 40px;
+    width: 22px;
   }
   
 }
@@ -386,11 +386,10 @@ a:hover {
 }
 
 .btnFullscreen {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   width: 40px;
   height: 40px;
   position: absolute;
-  bottom: 4px;
   cursor: pointer;
   z-index: 2;
 }
@@ -414,13 +413,13 @@ a:hover {
 }
 
 .fleches img {
-  width: 18px;
+  width: 12px;
 }
 
 @media screen and (orientation: portrait) {
   .fleches img {
     width: 100px;
-    height: 48px;
+    height: 32px;
     object-fit: contain;
     white-space: nowrap;
   }
