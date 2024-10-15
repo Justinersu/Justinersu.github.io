@@ -409,24 +409,6 @@ a:hover {
   width: 12px;
 }
 
-@media screen and (orientation: portrait) {
-  .fleches img {
-    width: 60px;
-    height: 32px;
-    object-fit: contain;
-  }
-  .fleches {
-    display: flex;
-    gap: 40px;
-  }
-}
-
-@media screen and (max-width: 880px) {
-  .fleches {
-    align-self: center;
-  }
-}
-
 .fleches img:nth-child(1) {
   margin-right: 20px;
 }
@@ -474,13 +456,40 @@ a:hover {
   background-color: var(--orange);
 }
 
+@media screen and (orientation: portrait) {
+  .fleches img {
+    width: 60px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .fleches {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .fleches {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .carteProjet h3 {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .cartes {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
   }
   .fleches img {
     width: 18px;
+  }
+  .carteProjet {
+    padding: 25px;
   }
 }
 /*---------- Fin Projets ----------*/
