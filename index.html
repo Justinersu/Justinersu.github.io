@@ -12,18 +12,29 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
     <div class="menu-burger">
-      <img class="icone-menu-burger-x" src="./assets/icone-btn-x-burger.png" />
+      <img
+        class="icone-menu-burger-x"
+        src="./assets/images/icone-btn-x-burger.png"
+      />
       <p><a href="#" onclick="fermerBurger()">accueil</a></p>
       <p><a href="#aPropos" onclick="fermerBurger()">à propos</a></p>
       <p><a href="#projets" onclick="fermerBurger()">projets</a></p>
       <div class="email-telephone">
-        <a href="mailto: justinersu05@gmail.com"><img src="./assets/email.png"/></a> 
-        <a href="tel: 438-722-5392"><img src="./assets/icone-telephone.png" /></a>
+        <a href="mailto: justinersu05@gmail.com"
+          ><img src="./assets/images/email.png"
+        /></a>
+        <a href="tel: 438-722-5392"
+          ><img src="./assets/images/icone-telephone.png"
+        /></a>
       </div>
     </div>
 
@@ -35,7 +46,7 @@
         <p><a href="#projets">projets</a></p>
       </nav>
       <div class="icone-burger">
-        <img class="icone-menu-burger" src="./assets/icone_burger.png" />
+        <img class="icone-menu-burger" src="./assets/images/icone_burger.png" />
       </div>
       <!---------- Contenu principal ---------->
       <main>
@@ -62,10 +73,37 @@
               438-722-5392<br />
               justinersu05@gmail.com
             </p>
-            <img src="assets/photos.jpg" />
+            <img src="./assets/images/photos.jpg" />
           </div>
-          <div class="competences">
-            <img src="assets/competences.png" />
+          <!-- Slider main container -->
+          <div class="swiper competences">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./assets/images/competences/adobe-ps.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/competences/adobe-ai.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/competences/adobe-ae.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/competences/figma.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/competences/html5.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/competences/css3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/competences/js.png" />
+              </div>
+            </div>
+            <!-- If we need scrollbar 
+              <div class="swiper-scrollbar"></div>-->
           </div>
         </div>
 
@@ -80,17 +118,18 @@
                 <img
                   class="btnFullscreen"
                   id="btnFullscreenPortrait"
-                  src="./assets/icone_fullscreen.png"
+                  src="./assets/images/icone_fullscreen.png"
                 />
                 <img
                   class="img_projet"
                   id="imgPortrait"
-                  src="./assets/projet_portrait/portrait_1_mode.jpg"
+                  src="./assets/images/projet_portrait/portrait_1_mode.jpg"
+                  onclick="appearFullscreen(true)"
                 />
               </div>
               <div class="fleches">
-                <img id="btnGauche" src="./assets/fleche_gauche.png" />
-                <img id="btnDroit" src="./assets/fleche_droite.png" />
+                <img id="btnGauche" src="./assets/images/fleche_gauche.png" />
+                <img id="btnDroit" src="./assets/images/fleche_droite.png" />
               </div>
               <p>Création de 6 portraits qui me représente.</p>
               <p class="roles">
@@ -105,7 +144,7 @@
               <h3>Jeu interactif</h3>
               <img
                 class="img_projet"
-                src="./assets/jeu_interactif_accueil.jpg"
+                src="./assets/images/jeu_interactif_accueil.jpg"
               />
               <div class="btns_interaction">
                 <a
@@ -114,8 +153,8 @@
                   >lien vers le site</a
                 >
                 <!--<div class="fleches">
-                <img src="./assets/fleche_gauche.png" />
-                <img src="./assets/fleche_droite.png" />
+                <img src="./assets/images/fleche_gauche.png" />
+                <img src="./assets/images/fleche_droite.png" />
               </div>-->
               </div>
               <p>
@@ -133,7 +172,7 @@
             <div class="carteProjet">
               <h3>Générique 2D</h3>
               <video class="img_projet" controls>
-                <source src="./assets/generique_2D.mp4" />
+                <source src="./assets/images/generique_2D.mp4" />
                 Your browser does not support the video tag.
               </video>
               <div class="btns_interaction">
@@ -143,8 +182,8 @@
                   >lien vers le projet vidéo complet</a
                 >
                 <!--<div class="fleches">
-                <img src="./assets/fleche_gauche.png" />
-                <img src="./assets/fleche_droite.png" />
+                <img src="./assets/images/fleche_gauche.png" />
+                <img src="./assets/images/fleche_droite.png" />
               </div>-->
               </div>
               <p>
@@ -164,17 +203,24 @@
                 <img
                   class="btnFullscreen"
                   id="btnFullscreen"
-                  src="./assets/icone_fullscreen.png"
+                  src="./assets/images/icone_fullscreen.png"
                 />
                 <img
                   class="img_projet"
                   id="imgScene"
-                  src="./assets/projet_3d/rendu_global.jpg"
+                  src="./assets/images/projet_3d/rendu_global.jpg"
+                  onclick="appearFullscreen(false)"
                 />
               </div>
               <div class="fleches">
-                <img class="btnSceneDroit" src="./assets/fleche_gauche.png" />
-                <img class="btnSceneGauche" src="./assets/fleche_droite.png" />
+                <img
+                  class="btnSceneDroit"
+                  src="./assets/images/fleche_gauche.png"
+                />
+                <img
+                  class="btnSceneGauche"
+                  src="./assets/images/fleche_droite.png"
+                />
               </div>
               <p>
                 Création d’une scène 3D à partir du thème d’une grotte magique.
@@ -195,18 +241,27 @@
       <div class="fullscreen_container">
         <div class="fullscreen">
           <img id="imgFullscreen" />
-          <img id="btnFermer" src="./assets/icone_fermer.png" />
+          <img id="btnFermer" src="./assets/images/icone_fermer.png" />
         </div>
         <div class="btnNextFullscreen flechesScene">
-          <img class="sceneFsGauche" src="./assets/fleche_gauche_blanc.png" />
-          <img class="sceneFsDroit" src="./assets/fleche_droite_blanc.png" />
+          <img
+            class="sceneFsGauche"
+            src="./assets/images/fleche_gauche_blanc.png"
+          />
+          <img
+            class="sceneFsDroit"
+            src="./assets/images/fleche_droite_blanc.png"
+          />
         </div>
         <div class="btnNextFullscreen flechesPortrait">
           <img
             class="portraitFsGauche"
-            src="./assets/fleche_gauche_blanc.png"
+            src="./assets/images/fleche_gauche_blanc.png"
           />
-          <img class="portraitFsDroit" src="./assets/fleche_droite_blanc.png" />
+          <img
+            class="portraitFsDroit"
+            src="./assets/images/fleche_droite_blanc.png"
+          />
         </div>
       </div>
 
@@ -214,13 +269,13 @@
       <footer>
         <div class="icones_reseaux">
           <a href="https://github.com/Justinersu" target="_blank"
-            ><img src="./assets/github.png"
+            ><img src="./assets/images/github.png"
           /></a>
           <a href="https://linkedin.com/in/justinersu05" target="_blank"
-            ><img src="./assets/linkedin.png"
+            ><img src="./assets/images/linkedin.png"
           /></a>
           <a href="mailto: justinersu05@gmail.com"
-            ><img src="./assets/email.png"
+            ><img src="./assets/images/email.png"
           /></a>
         </div>
         <p>
@@ -234,6 +289,7 @@
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

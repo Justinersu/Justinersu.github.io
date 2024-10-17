@@ -1,3 +1,29 @@
+// ------ Swiper compétences ------
+const swiper = new Swiper('.swiper', {
+  loop: false,
+  autoplay: true,
+  spaceBetweenSlides: 0,
+  slidesPerView: 7,
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  breakpoints: {
+    815: {
+      slidesPerView: 7,
+    },
+    200: {
+      slidesPerView: 4,
+    },
+  },
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: true
+  },
+});
+
 // ------ Variables, arrays ------
 const imgPortrait = document.getElementById("imgPortrait");
 const btnDroit = document.getElementById("btnDroit");
@@ -19,22 +45,22 @@ const flechesPortrait = document.querySelector(".flechesPortrait");
 const flechesScene = document.querySelector(".flechesScene");
 
 const portraits = [
-  "./assets/projet_portrait/portrait_1_mode.jpg",
-  "./assets/projet_portrait/portrait_2_musique.jpg",
-  "./assets/projet_portrait/portrait_3_nature.jpg",
-  "./assets/projet_portrait/portrait_4_lecture.jpg",
-  "./assets/projet_portrait/portrait_5_jeux_video.jpg",
-  "./assets/projet_portrait/portrait_6_beaute.jpg",
-  "./assets/projet_portrait/signature.jpg",
-  "./assets/projet_portrait/moodboard_portrait.jpg",
-  "./assets/projet_portrait/moodboard_signature.jpg",
+  "./assets/images/projet_portrait/portrait_1_mode.jpg",
+  "./assets/images/projet_portrait/portrait_2_musique.jpg",
+  "./assets/images/projet_portrait/portrait_3_nature.jpg",
+  "./assets/images/projet_portrait/portrait_4_lecture.jpg",
+  "./assets/images/projet_portrait/portrait_5_jeux_video.jpg",
+  "./assets/images/projet_portrait/portrait_6_beaute.jpg",
+  "./assets/images/projet_portrait/signature.jpg",
+  "./assets/images/projet_portrait/moodboard_portrait.jpg",
+  "./assets/images/projet_portrait/moodboard_signature.jpg",
 ];
 
 const scenes = [
-  "./assets/projet_3d/rendu_global.jpg",
-  "./assets/projet_3d/rendu_coffre.jpg",
-  "./assets/projet_3d/rendu_lit.jpg",
-  "./assets/projet_3d/rendu_potion.jpg",
+  "./assets/images/projet_3d/rendu_global.jpg",
+  "./assets/images/projet_3d/rendu_coffre.jpg",
+  "./assets/images/projet_3d/rendu_lit.jpg",
+  "./assets/images/projet_3d/rendu_potion.jpg",
 ];
 
 let currentIndexPortrait = 0;
@@ -109,6 +135,7 @@ const liensBurger = document.querySelectorAll("div.menu-burger > a");
 
 function openBurger() {
     menuBurger.style.display = "flex";
+    /*setTimeout(menuBurger.style.animationPlayState = "running", 2000);*/
 }
 
 function fermerBurger() {

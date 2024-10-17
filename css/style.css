@@ -106,21 +106,31 @@ a:hover {
   margin: 25px 0 25px 0;
 }
 
+/*@keyframes menuBurger {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0;
+  }
+}*/
+
 .icone-burger {
   display: none;
   width: 100vw;
   background-color: #fff;
   border-bottom: 2px solid #EBEBEB;
-  height: 100px;
+  height: 70px;
   position: fixed;
   z-index: 5;
 }
 
 .icone-menu-burger {
   position: fixed;
-  top: 30px;
+  top: 20px;
   left: 40px;
-  width: 48px;
+  width: 34px;
   z-index: 2;
 }
 
@@ -131,17 +141,20 @@ a:hover {
 .menu-burger {
   display: none;
   justify-content: center;
-  gap: 100px;
+  gap: 75px;
   align-items: center;
   flex-direction: column;
   position: sticky;
-  top: 0;
   z-index: 10;
+  top: 0;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
   max-height: 100%;
   background-color: #EBEBEB;
+  /*animation-duration: 2s;
+  animation-name: menuBurger;
+  animation-play-state: paused;*/
 }
 
 .menu-burger p {
@@ -230,13 +243,20 @@ a:hover {
 }
 
 .competences {
-  overflow: auto;
   margin-top: 50px;
   padding: 10px;
+  overflow: hidden;
 }
 
 .competences img {
-  width: 100%;
+  width: auto;
+  height: 75px;
+}
+
+@media screen and (max-width: 880px) {
+  .competences {
+    width: 80vw;
+  }
 }
 /*---------- Fin À propos ----------*/
 
@@ -374,6 +394,10 @@ a:hover {
   object-fit: contain;
 }
 
+#imgPortrait, #imgScene {
+  cursor: pointer;
+}
+
 .carteContent {
   position: relative;
 }
@@ -429,7 +453,7 @@ a:hover {
 }
 
 .check:before {
-  content: url("../assets/checkbox.png");
+  content: url("../assets/images/checkbox.png");
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
