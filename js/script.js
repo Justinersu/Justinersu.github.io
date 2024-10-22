@@ -11,11 +11,14 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    815: {
+    700: {
       slidesPerView: 7,
     },
-    200: {
+    400: {
       slidesPerView: 4,
+    },
+    200: {
+      slidesPerView: 3,
     },
   },
   autoplay: {
@@ -135,7 +138,6 @@ const liensBurger = document.querySelectorAll("div.menu-burger > a");
 
 function openBurger() {
     menuBurger.style.display = "flex";
-    /*setTimeout(menuBurger.style.animationPlayState = "running", 2000);*/
 }
 
 function fermerBurger() {

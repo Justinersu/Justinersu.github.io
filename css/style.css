@@ -106,16 +106,6 @@ a:hover {
   margin: 25px 0 25px 0;
 }
 
-/*@keyframes menuBurger {
-  from {
-    top: -100%;
-  }
-
-  to {
-    top: 0;
-  }
-}*/
-
 .icone-burger {
   display: none;
   width: 100vw;
@@ -152,9 +142,6 @@ a:hover {
   max-width: 100%;
   max-height: 100%;
   background-color: #EBEBEB;
-  /*animation-duration: 2s;
-  animation-name: menuBurger;
-  animation-play-state: paused;*/
 }
 
 .menu-burger p {
@@ -178,17 +165,16 @@ a:hover {
 
 .icone-menu-burger-x {
   position: absolute;
-  top: 30px;
-  width: 48px;
+  top: 20px;
   left: 40px;
-  width: 40px;
+  width: 34px;
 }
 
 .icone-menu-burger-x:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1080px) {
   .navbar {
     display: none;
   }
