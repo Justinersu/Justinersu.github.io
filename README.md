@@ -7,4 +7,3 @@ Bienvenue sur mon site ! Vous y découvrirez une sélection de projets réalisé
 
 ## Auteure
 #### Justine Rousseau
-I made this :)
