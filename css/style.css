@@ -14,6 +14,7 @@
 
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 .stop-scrolling {
@@ -381,20 +382,30 @@ a:hover {
   width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: transform 0.5s;
+
 }
 
-.img_projet:hover {
+.carteContent:hover {
   transform: scale(1.02);
   cursor: pointer;
 }
 
 .carteContent {
   position: relative;
+  transition: transform 0.5s;
+}
+
+.no_swiper .img_projet {
+  transition: transform 0.5s;
+}
+
+.no_swiper .img_projet:hover {
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .btnFullscreen {
-  background: rgba(0, 0, 0, 0.6);
+  background: #000;
   width: 40px;
   height: 40px;
   position: absolute;
@@ -403,7 +414,7 @@ a:hover {
 }
 
 .btnFullscreen:hover {
-  background: #000;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .btns_interaction {
@@ -445,14 +456,35 @@ a:hover {
 }
 
 .check:before {
-  content: url("../assets/images/checkbox.png");
+  content: url("../assets/images/icone_equipe.png");
   display: inline-block;
   vertical-align: middle;
   transform: scale(0.7);
   line-height: 1px;
   margin-right: 10px;
-  height: 30px;
 }
+
+.check span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.check ~ .check:before {
+  content: " ";
+  margin-left: 45px;
+}
+
+.equipe .check:before {
+  height: 15px;
+}
+
+.coequipier_linkedin {
+  display: inline;
+  height: 20px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+} 
 
 .carteProjet p {
   width: 90%;
@@ -474,24 +506,6 @@ a:hover {
   background-color: var(--orange);
 }
 
-@media screen and (orientation: portrait) {
-  .fleches img {
-    width: 60px;
-    height: 32px;
-    object-fit: contain;
-  }
-  .fleches {
-    display: flex;
-    gap: 40px;
-  }
-}
-
-@media screen and (max-width: 880px) {
-  .fleches {
-    align-self: center;
-  }
-}
-
 @media screen and (max-width: 350px) {
   .carteProjet h3 {
     font-size: 1.2rem;
@@ -508,6 +522,11 @@ a:hover {
   }
   .carteProjet {
     padding: 25px;
+  }
+  .fleches {
+    display: flex;
+    gap: 40px;
+    align-self: center;
   }
 }
 /*---------- Fin Projets ----------*/

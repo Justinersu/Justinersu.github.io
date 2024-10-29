@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justine Rousseau</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
       rel="stylesheet"
@@ -141,15 +141,17 @@
             </div>
 
             <!---------- Jeu interactif ---------->
-            <div class="carteProjet">
+            <div class="carteProjet no_swiper">
               <h3>Jeu interactif</h3>
-              <a href="https://justinersu.github.io/triomphe-de-la-magie/" target="_blank">
-              <img
-                class="img_projet"
-                
-                src="./assets/images/jeu_interactif_accueil.jpg"
-              />
-            </a>
+              <a
+                href="https://justinersu.github.io/triomphe-de-la-magie/"
+                target="_blank"
+              >
+                <img
+                  class="img_projet"
+                  src="./assets/images/jeu_interactif_accueil.jpg"
+                />
+              </a>
               <div class="btns_interaction">
                 <a
                   href="https://justinersu.github.io/triomphe-de-la-magie/"
@@ -173,14 +175,17 @@
             </div>
 
             <!---------- Générique 2D ---------->
-            <div class="carteProjet">
+            <div class="carteProjet no_swiper">
               <h3>Générique 2D</h3>
-              <a href="https://www-ccv.adobe.io/v1/player/ccv/7hHu6PxRY_2/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View" target="_blank">
-              <video class="img_projet" controls>
-                <source src="./assets/images/generique_2D.mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </a>
+              <a
+                href="https://www-ccv.adobe.io/v1/player/ccv/7hHu6PxRY_2/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+                target="_blank"
+              >
+                <video class="img_projet" controls>
+                  <source src="./assets/images/generique_2D.mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </a>
               <div class="btns_interaction">
                 <a
                   href="https://www-ccv.adobe.io/v1/player/ccv/7hHu6PxRY_2/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
@@ -199,11 +204,11 @@
                 rôle: animateur 2D<br />
                 technologie: after effects, adobe illustrator
               </p>
-              <p class="check">individuel</p>
+              <p class="check">individuel <span>générique seulement</span></p>
             </div>
 
             <!---------- Scène 3D ---------->
-            <div class="carteProjet">
+            <div class="carteProjet scene3D">
               <h3>Scène 3D</h3>
               <div class="carteContent">
                 <img
@@ -237,9 +242,11 @@
                 rôle: modélisateur 3d<br />
                 technologie: maya 3D
               </p>
-              <p class="check">Prethiah Rajaratnam</p>
-              <p class="check">Delphine Grenier</p>
-              <p class="check">Kenza El Harrif</p>
+              <div class="equipe">
+                <p class="check">Prethiah Rajaratnam</p>
+                <p class="check">Delphine Grenier</p>
+                <p class="check">Kenza El Harrif</p>
+              </div>
             </div>
           </div>
         </div>
@@ -250,7 +257,6 @@
         <img id="btnFermer" src="./assets/images/icone_fermer.png" />
         <div class="fullscreen">
           <img id="imgFullscreen" />
-          
         </div>
         <div class="btnNextFullscreen flechesScene">
           <img
