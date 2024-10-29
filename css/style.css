@@ -73,6 +73,7 @@ a {
   font-family: "Fira Code", monospace;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
+  transition: color 0.5s;
 }
 
 a:hover {
@@ -111,7 +112,7 @@ a:hover {
   width: 100vw;
   background-color: #fff;
   border-bottom: 2px solid #EBEBEB;
-  height: 70px;
+  height: 65px;
   position: fixed;
   z-index: 5;
 }
@@ -120,7 +121,7 @@ a:hover {
   position: fixed;
   top: 20px;
   left: 40px;
-  width: 34px;
+  width: 30px;
   z-index: 2;
 }
 
@@ -167,7 +168,7 @@ a:hover {
   position: absolute;
   top: 20px;
   left: 40px;
-  width: 34px;
+  width: 30px;
 }
 
 .icone-menu-burger-x:hover {
@@ -255,6 +256,7 @@ a:hover {
   display: none;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .fullscreen_container .flechesPortrait {
@@ -274,13 +276,14 @@ a:hover {
   gap: 2vw;
 }
 
-.fullscreen #btnFermer {
+#btnFermer {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 2.5%;
+  top: 25px;
+  right: 25px;
+  width: 20px;
   z-index: 1;
   cursor: pointer;
+  transition: opacity 0.5s;
 }
 
 #btnFermer:hover {
@@ -293,9 +296,8 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 75vh;
-  width: auto;
-  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.9);
+  width: 60vw;
+  object-fit: contain;
 }
 
 .btnNextFullscreen {
@@ -303,12 +305,13 @@ a:hover {
   display: flex;
   position: absolute;
   justify-content: center;
-  gap: 75vw;
+  gap: 70vw;
   left: -1.8%;
 }
 
 .btnNextFullscreen img {
   width: 18px;
+  transition: opacity 0.5s;
 }
 
 .btnNextFullscreen img:hover {
@@ -378,9 +381,11 @@ a:hover {
   width: 100%;
   max-height: 100%;
   object-fit: contain;
+  transition: transform 0.5s;
 }
 
-#imgPortrait, #imgScene {
+.img_projet:hover {
+  transform: scale(1.02);
   cursor: pointer;
 }
 
@@ -397,7 +402,7 @@ a:hover {
   z-index: 2;
 }
 
-#btnFullscreen:hover {
+.btnFullscreen:hover {
   background: #000;
 }
 
@@ -417,6 +422,7 @@ a:hover {
 
 .fleches img {
   width: 12px;
+  transition: opacity 0.5s;
 }
 
 .fleches img:nth-child(1) {
@@ -442,8 +448,10 @@ a:hover {
   content: url("../assets/images/checkbox.png");
   display: inline-block;
   vertical-align: middle;
-  line-height: normal;
+  transform: scale(0.7);
+  line-height: 1px;
   margin-right: 10px;
+  height: 30px;
 }
 
 .carteProjet p {
