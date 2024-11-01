@@ -376,6 +376,7 @@ a:hover {
   letter-spacing: 3px;
   margin: 0;
   text-align: center;
+  align-self: center;
 }
 
 .img_projet {
