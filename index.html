@@ -1,319 +1,242 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Justine Rousseau</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
-    <div class="menu-burger">
-      <img
-        class="icone-menu-burger-x"
-        src="./assets/images/icone-btn-x-burger.png"
-      />
-      <p><a href="#" onclick="fermerBurger()">accueil</a></p>
-      <p><a href="#aPropos" onclick="fermerBurger()">à propos</a></p>
-      <p><a href="#projets" onclick="fermerBurger()">projets</a></p>
-      <div class="email-telephone">
-        <a href="mailto: justinersu05@gmail.com"
-          ><img src="./assets/images/email.png"
-        /></a>
-        <a href="tel: 438-722-5392"
-          ><img src="./assets/images/icone-telephone.png"
-        /></a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justine Rousseau</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="menu-burger">
+    <img class="icone-menu-burger-x" src="./assets/images/icone-btn-x-burger.png" />
+    <p><a href="#" onclick="fermerBurger()">accueil</a></p>
+    <p><a href="#aPropos" onclick="fermerBurger()">à propos</a></p>
+    <p><a href="#projets" onclick="fermerBurger()">projets</a></p>
+    <div class="email-telephone">
+      <a href="mailto: justinersu05@gmail.com"><img src="./assets/images/email.png" /></a>
+      <a href="tel: 438-722-5392"><img src="./assets/images/icone-telephone.png" /></a>
     </div>
+  </div>
 
-    <div class="container">
-      <!---------- Navigation ---------->
-      <nav class="navbar">
-        <p><a href="#">accueil</a></p>
-        <p><a href="#aPropos">à propos</a></p>
-        <p><a href="#projets">projets</a></p>
-      </nav>
-      <div class="icone-burger">
-        <img class="icone-menu-burger" src="./assets/images/icone_burger.png" />
-      </div>
-      <!---------- Contenu principal ---------->
-      <main>
-        <!---------- Titre de la page ---------->
-        <div class="titre_container">
-          <div class="titre_page">
-            <h1><span>Justine Rousseau</span></h1>
-            <h2>portfolio</h2>
-          </div>
+  <div class="container">
+    <!---------- Navigation ---------->
+    <nav class="navbar">
+      <p><a href="#">accueil</a></p>
+      <p><a href="#aPropos">à propos</a></p>
+      <p><a href="#projets">projets</a></p>
+    </nav>
+    <div class="icone-burger">
+      <img class="icone-menu-burger" src="./assets/images/icone_burger.png" />
+    </div>
+    <!---------- Contenu principal ---------->
+    <main>
+      <!---------- Titre de la page ---------->
+      <div class="titre_container">
+        <div class="titre_page">
+          <h1><span>Justine Rousseau</span></h1>
+          <h2>portfolio</h2>
         </div>
+      </div>
 
-        <!---------- À propos ----------->
-        <div id="aPropos" class="a_propos">
-          <h2><span>à propos</span></h2>
-          <div class="presentation">
-            <p>
-              Allo!<br /><br />
-              Moi c’est Justine, étudiante en troisième année de la Techniques
-              d’intégration multimédia. Je suis passionnée, entre autres, du
-              <span id="web">développement web</span> et du
-              <span id="design">design graphique</span>. Je recherche
-              présentement un stage dans l’un de ces domaines.<br /><br />
-              Basé à Montréal, Québec<br />
-              438-722-5392<br />
-              justinersu05@gmail.com
-            </p>
-            <img src="./assets/images/photos.jpg" />
-          </div>
-          <!-- Slider main container -->
-          <div class="swiper competences">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/html5.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/css3.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/js.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/wordpress.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/sass.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/bootstrap.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/adobe-ps.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/figma.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/adobe-ai.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/competences/adobe-ae.png" />
-              </div>
+      <!---------- À propos ----------->
+      <div id="aPropos" class="a_propos">
+        <h2><span>à propos</span></h2>
+        <div class="presentation">
+          <p>
+            Allo!<br /><br />
+            Moi c’est Justine, étudiante en troisième année de la Techniques
+            d’intégration multimédia. Je suis passionnée, entre autres, du
+            <span id="web">développement web</span> et du
+            <span id="design">design graphique</span>. Je recherche
+            présentement un stage dans l’un de ces domaines.<br /><br />
+            Basé à Montréal, Québec<br />
+            438-722-5392<br />
+            justinersu05@gmail.com
+          </p>
+          <img src="./assets/images/photos.jpg" />
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper competences">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/html5.png" />
             </div>
-            <!-- If we need scrollbar 
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/css3.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/js.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/wordpress.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/sass.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/bootstrap.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/adobe-ps.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/figma.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/adobe-ai.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/competences/adobe-ae.png" />
+            </div>
+          </div>
+          <!-- If we need scrollbar 
               <div class="swiper-scrollbar"></div>-->
-          </div>
-        </div>
-
-        <!---------- Projets ---------->
-        <div id="projets">
-          <h2><span>projets</span></h2>
-          <div class="cartes">
-            <!---------- Portrait ---------->
-            <div class="carteProjet">
-              <h3>Portrait</h3>
-              <div class="carteContent">
-                <img
-                  class="btnFullscreen"
-                  id="btnFullscreenPortrait"
-                  src="./assets/images/icone_fullscreen.png"
-                />
-                <img
-                  class="img_projet"
-                  id="imgPortrait"
-                  src="./assets/images/projet_portrait/portrait_1_mode.jpg"
-                  onclick="appearFullscreen(true)"
-                />
-              </div>
-              <div class="fleches">
-                <img id="btnGauche" src="./assets/images/fleche_gauche.png" />
-                <img id="btnDroit" src="./assets/images/fleche_droite.png" />
-              </div>
-              <p>Création de 6 portraits qui me représentent.</p>
-              <p class="roles">
-                rôle: designer graphique<br />
-                technologie: photoshop
-              </p>
-              <p class="check">individuel</p>
-            </div>
-
-            <!---------- Jeu interactif ---------->
-            <div class="carteProjet no_swiper">
-              <h3>Jeu interactif</h3>
-              <a
-                href="https://justinersu.github.io/triomphe-de-la-magie/"
-                target="_blank"
-              >
-                <img
-                  class="img_projet"
-                  src="./assets/images/jeu_interactif_accueil.jpg"
-                />
-              </a>
-              <div class="btns_interaction">
-                <a
-                  href="https://justinersu.github.io/triomphe-de-la-magie/"
-                  target="_blank"
-                  >lien vers le site</a
-                >
-                <!--<div class="fleches">
-                <img src="./assets/images/fleche_gauche.png" />
-                <img src="./assets/images/fleche_droite.png" />
-              </div>-->
-              </div>
-              <p>
-                Création d’une histoire interactive dont vous êtes le héros. Le
-                joueur doit prendre des décisions déclanchant diverses actions.
-              </p>
-              <p class="roles">
-                rôle: programmeur, développeur web<br />
-                technologie: html, css, javascript
-              </p>
-              <p class="check">individuel</p>
-            </div>
-
-            <!---------- Projet app d'un festival ---------->
-            <div class="carteProjet no_swiper">
-              <h3>App d'un festival d'art numérique</h3>
-              <a
-                href="https://justinersu.github.io/justine-maik-app-festival-art/"
-                target="_blank"
-              >
-                <img
-                  class="img_projet"
-                  src="./assets/images/artechouse.png"
-                />
-              </a>
-              <div class="btns_interaction">
-                <a
-                  href="https://justinersu.github.io/justine-maik-app-festival-art/"
-                  target="_blank"
-                  >lien vers le site</a
-                >
-                <!--<div class="fleches">
-                <img src="./assets/images/fleche_gauche.png" />
-                <img src="./assets/images/fleche_droite.png" />
-              </div>-->
-              </div>
-              <p>
-                Création d'une application pour un festival d'art numérique avec la librairie Bootstrap. Nous avons choisi le festival Artechouse.
-              </p>
-              <p class="roles">
-                rôle: développeur web de l'app<br />
-                technologie: html, css, javascript, bootstrap
-              </p>
-              <p class="check">Maïk Hamel <span>développeur du site</span></p>
-            </div>
-
-            <!---------- Scène 3D ---------->
-            <div class="carteProjet scene3D">
-              <h3>Scène 3D</h3>
-              <div class="carteContent">
-                <img
-                  class="btnFullscreen"
-                  id="btnFullscreen"
-                  src="./assets/images/icone_fullscreen.png"
-                />
-                <img
-                  class="img_projet"
-                  id="imgScene"
-                  src="./assets/images/projet_3d/rendu_global.jpg"
-                  onclick="appearFullscreen(false)"
-                />
-              </div>
-              <div class="fleches">
-                <img
-                  class="btnSceneDroit"
-                  src="./assets/images/fleche_gauche.png"
-                />
-                <img
-                  class="btnSceneGauche"
-                  src="./assets/images/fleche_droite.png"
-                />
-              </div>
-              <p>
-                Création d’une scène 3D à partir du thème d’une grotte magique.
-                Trois des objets et la base de la scène (le sol) ont été
-                modélisés par moi.
-              </p>
-              <p class="roles">
-                rôle: modélisateur 3d<br />
-                technologie: maya 3D
-              </p>
-              <div class="equipe">
-                <p class="check">Prethiah Rajaratnam</p>
-                <p class="check">Delphine Grenier</p>
-                <p class="check">Kenza El Harrif</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <!---------- Fullscreen Images ---------->
-      <div class="fullscreen_container">
-        <img id="btnFermer" src="./assets/images/icone_fermer.png" />
-        <div class="fullscreen">
-          <img id="imgFullscreen" />
-        </div>
-        <div class="btnNextFullscreen flechesScene">
-          <img
-            class="sceneFsGauche"
-            src="./assets/images/fleche_gauche_blanc.png"
-          />
-          <img
-            class="sceneFsDroit"
-            src="./assets/images/fleche_droite_blanc.png"
-          />
-        </div>
-        <div class="btnNextFullscreen flechesPortrait">
-          <img
-            class="portraitFsGauche"
-            src="./assets/images/fleche_gauche_blanc.png"
-          />
-          <img
-            class="portraitFsDroit"
-            src="./assets/images/fleche_droite_blanc.png"
-          />
         </div>
       </div>
 
-      <!---------- Pied de page ---------->
-      <footer>
-        <div class="icones_reseaux">
-          <a href="https://github.com/Justinersu" target="_blank"
-            ><img src="./assets/images/github.png"
-          /></a>
-          <a href="https://linkedin.com/in/justinersu05" target="_blank"
-            ><img src="./assets/images/linkedin.png"
-          /></a>
-          <a href="mailto: justinersu05@gmail.com"
-            ><img src="./assets/images/email.png"
-          /></a>
+      <!---------- Projets ---------->
+      <div id="projets">
+        <h2><span>projets</span></h2>
+        <div class="cartes">
+
+          <!---------- Le sorcier barista ---------->
+          <div class="carteProjet no_swiper">
+            <h3>Le sorcier barista</h3>
+            <a href="https://justinersu.github.io/le-sorcier-barista/" target="_blank">
+              <img class="img_projet" src="./assets/images/le-sorcier-barista.png" />
+            </a>
+            <div class="btns_interaction">
+              <a href="https://justinersu.github.io/le-sorcier-barista/" target="_blank">lien vers le site</a>
+              <!--<div class="fleches">
+                <img src="./assets/images/fleche_gauche.png" />
+                <img src="./assets/images/fleche_droite.png" />
+              </div>-->
+            </div>
+            <p>
+              Projet personnel de création d'un site de A à Z pour une entreprise fictive qui combine café et boutique
+              de jeux. Pour l'instant, seule la page d'accueil statique est terminée, mais j'envisage d'ajouter
+              prochainement un panier d'achat avec React.
+            </p>
+            <p class="roles">
+              rôle: Designer, intégratrice et développeuse web<br />
+              technologie: html, css/sass, javascript
+            </p>
+            <p class="check">Individuel</p>
+          </div>
+
+          <!---------- Projet app d'un festival ---------->
+          <div class="carteProjet no_swiper">
+            <h3>App d'un festival d'art numérique</h3>
+            <a href="https://justinersu.github.io/justine-maik-app-festival-art/" target="_blank">
+              <img class="img_projet" src="./assets/images/artechouse.png" />
+            </a>
+            <div class="btns_interaction">
+              <a href="https://justinersu.github.io/justine-maik-app-festival-art/" target="_blank">lien vers le
+                site</a>
+              <!--<div class="fleches">
+                          <img src="./assets/images/fleche_gauche.png" />
+                          <img src="./assets/images/fleche_droite.png" />
+                        </div>-->
+            </div>
+            <p>
+              Création d'une application pour un festival d'art numérique avec la librairie Bootstrap. Nous avons choisi
+              le festival Artechouse.
+            </p>
+            <p class="roles">
+              rôle: développeur web de l'app<br />
+              technologie: html, css, javascript, bootstrap
+            </p>
+            <p class="check">Maïk Hamel <span>développeur du site</span></p>
+          </div>
+
+          <!---------- Jeu interactif ---------->
+          <div class="carteProjet no_swiper">
+            <h3>Jeu interactif</h3>
+            <a href="https://justinersu.github.io/triomphe-de-la-magie/" target="_blank">
+              <img class="img_projet" src="./assets/images/jeu_interactif_accueil.jpg" />
+            </a>
+            <div class="btns_interaction">
+              <a href="https://justinersu.github.io/triomphe-de-la-magie/" target="_blank">lien vers le site</a>
+              <!--<div class="fleches">
+                <img src="./assets/images/fleche_gauche.png" />
+                <img src="./assets/images/fleche_droite.png" />
+              </div>-->
+            </div>
+            <p>
+              Création d’une histoire interactive dont vous êtes le héros. Le
+              joueur doit prendre des décisions déclanchant diverses actions.
+            </p>
+            <p class="roles">
+              rôle: programmeur, développeur web<br />
+              technologie: html, css, javascript
+            </p>
+            <p class="check">individuel</p>
+          </div>
+
+          <!---------- Portrait ---------->
+          <div class="carteProjet">
+            <h3>Portrait</h3>
+            <div class="carteContent">
+              <img class="btnFullscreen" id="btnFullscreenPortrait" src="./assets/images/icone_fullscreen.png" />
+              <img class="img_projet" id="imgPortrait" src="./assets/images/projet_portrait/portrait_1_mode.jpg"
+                onclick="appearFullscreen(true)" />
+            </div>
+            <div class="fleches">
+              <img id="btnGauche" src="./assets/images/fleche_gauche.png" />
+              <img id="btnDroit" src="./assets/images/fleche_droite.png" />
+            </div>
+            <p>Création de 6 portraits qui me représentent.</p>
+            <p class="roles">
+              rôle: designer graphique<br />
+              technologie: photoshop
+            </p>
+            <p class="check">individuel</p>
+          </div>
         </div>
-        <p>
-          <span
-            ><a href="https://github.com/Justinersu/Justinersu.github.io"
-              >Justine Rousseau</a
-            ></span
-          >
-          - 2024
-        </p>
-      </footer>
+      </div>
+    </main>
+
+    <!---------- Fullscreen Images ---------->
+    <div class="fullscreen_container">
+      <img id="btnFermer" src="./assets/images/icone_fermer.png" />
+      <div class="fullscreen">
+        <img id="imgFullscreen" />
+      </div>
+      <div class="btnNextFullscreen flechesScene">
+        <img class="sceneFsGauche" src="./assets/images/fleche_gauche_blanc.png" />
+        <img class="sceneFsDroit" src="./assets/images/fleche_droite_blanc.png" />
+      </div>
+      <div class="btnNextFullscreen flechesPortrait">
+        <img class="portraitFsGauche" src="./assets/images/fleche_gauche_blanc.png" />
+        <img class="portraitFsDroit" src="./assets/images/fleche_droite_blanc.png" />
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
-  </body>
+    <!---------- Pied de page ---------->
+    <footer>
+      <div class="icones_reseaux">
+        <a href="https://github.com/Justinersu" target="_blank"><img src="./assets/images/github.png" /></a>
+        <a href="https://linkedin.com/in/justinersu05" target="_blank"><img src="./assets/images/linkedin.png" /></a>
+        <a href="mailto: justinersu05@gmail.com"><img src="./assets/images/email.png" /></a>
+      </div>
+      <p>
+        <span><a href="https://github.com/Justinersu/Justinersu.github.io">Justine Rousseau</a></span>
+        - 2024
+      </p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
