@@ -5,6 +5,7 @@
   --rose: #ffbdf8;
   --vert: #8fe2c9;
   --gris: #363636;
+  --width: 0;
 }
 
 /*---------- Début Styles Généraux ----------*/
@@ -40,19 +41,25 @@ main {
 
 h2 {
   font-family: "Fira Code", monospace;
-  line-height: 0;
   font-size: 1.2rem;
   font-weight: 400;
-  padding-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 h2 span {
-  background-color: var(--jaune);
+  position: relative;
 }
 
-.a_propos,
-.projets {
-  margin: 15vh 0 5vh 0;
+h2 span:after {
+  content: "";
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: var(--width);
+  height: 60%;
+  background-color: var(--jaune);
+  z-index: -1;
 }
 
 a {
@@ -70,10 +77,6 @@ a:hover {
 @media screen and (max-width: 880px) {
   .presentation img {
     display: none;
-  }
-
-  h2 {
-    font-size: 1.5rem;
   }
 }
 

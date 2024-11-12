@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 // ------ Swiper compétences ------
 const swiper = new Swiper('.swiper', {
   loop: false,
@@ -33,33 +35,53 @@ const lettresPortfolio = document.querySelectorAll("#titrePortfolio span");
 
 let colors = ["#8fe2c9", "#ffd296", "#85bff3", "#ffbdf8"];
 
-lettresPortfolio.forEach((letter) => 
-  letter.addEventListener("mouseenter", function() {
+lettresPortfolio.forEach((letter) =>
+  letter.addEventListener("mouseenter", function () {
     let randomI = Math.floor(Math.random() * colors.length);
     letter.style.color = colors[randomI];
   }
-));
+  ));
 
-lettresPortfolio.forEach((letter) => 
-  letter.addEventListener("touchstart", function() {
+lettresPortfolio.forEach((letter) =>
+  letter.addEventListener("touchstart", function () {
     let randomI = Math.floor(Math.random() * colors.length);
     letter.style.color = colors[randomI];
   }
-));
+  ));
 
 
-lettresPortfolio.forEach((letter) => 
-  letter.addEventListener("mouseleave", function() {
+lettresPortfolio.forEach((letter) =>
+  letter.addEventListener("mouseleave", function () {
     letter.style.color = "#fff";
   }
-));
+  ));
 
 
-lettresPortfolio.forEach((letter) => 
-  letter.addEventListener("touchend", function() {
+lettresPortfolio.forEach((letter) =>
+  letter.addEventListener("touchend", function () {
     letter.style.color = "#fff";
   }
-));
+  ));
+
+// ------ Gsap trigger -----
+
+gsap.to("#titreAPropos", { 
+  "--width": "100%",
+  scrollTrigger: {
+    duration: 1,
+    start: 'top 50%',
+    trigger: '.a_propos',
+  }
+})
+
+gsap.to("#titreProjets", { 
+  "--width": "100%",
+  scrollTrigger: {
+    duration: 1,
+    start: 'top 50%',
+    trigger: '#projets',
+  }
+})
 
 
 // ------ Variables, arrays ------
