@@ -212,7 +212,6 @@ a:hover {
   animation-name: highlighter;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
-
 }
 
 @keyframes highlighter {
@@ -277,6 +276,7 @@ a:hover {
 .a_propos {
   margin-bottom: 150px;
 }
+
 
 .presentation {
   display: flex;

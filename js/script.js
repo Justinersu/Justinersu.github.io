@@ -41,7 +41,7 @@ lettresPortfolio.forEach((letter) =>
 ));
 
 lettresPortfolio.forEach((letter) => 
-  letter.addEventListener("touchmove", function() {
+  letter.addEventListener("touchenter", function() {
     let randomI = Math.floor(Math.random() * colors.length);
     letter.style.color = colors[randomI];
   }
@@ -53,6 +53,14 @@ lettresPortfolio.forEach((letter) =>
     letter.style.color = "#fff";
   }
 ));
+
+lettresPortfolio.forEach((letter) => 
+  letter.addEventListener("touchleave", function() {
+    let randomI = Math.floor(Math.random() * colors.length);
+    letter.style.color = colors[randomI];
+  }
+));
+
 
 // ------ Variables, arrays ------
 const imgPortrait = document.getElementById("imgPortrait");
