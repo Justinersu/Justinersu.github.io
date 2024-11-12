@@ -27,6 +27,33 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+//------- Random color on portfolio -------
+const titrePortfolio = document.getElementById("titrePortfolio");
+const lettresPortfolio = document.querySelectorAll("#titrePortfolio span");
+
+let colors = ["#8fe2c9", "#ffd296", "#85bff3", "#ffbdf8"];
+
+lettresPortfolio.forEach((letter) => 
+  letter.addEventListener("mouseenter", function() {
+    let randomI = Math.floor(Math.random() * colors.length);
+    letter.style.color = colors[randomI];
+  }
+));
+
+lettresPortfolio.forEach((letter) => 
+  letter.addEventListener("touchmove", function() {
+    let randomI = Math.floor(Math.random() * colors.length);
+    letter.style.color = colors[randomI];
+  }
+));
+
+
+lettresPortfolio.forEach((letter) => 
+  letter.addEventListener("mouseleave", function() {
+    letter.style.color = "#fff";
+  }
+));
+
 // ------ Variables, arrays ------
 const imgPortrait = document.getElementById("imgPortrait");
 const btnDroit = document.getElementById("btnDroit");
@@ -108,11 +135,11 @@ const menuBurger = document.querySelector(".menu-burger");
 const liensBurger = document.querySelectorAll("div.menu-burger > a");
 
 function openBurger() {
-    menuBurger.style.display = "flex";
+  menuBurger.style.display = "flex";
 }
 
 function fermerBurger() {
-    menuBurger.style.display = "none";
+  menuBurger.style.display = "none";
 }
 
 iconeBurger.addEventListener("click", openBurger);
