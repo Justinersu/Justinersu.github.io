@@ -178,6 +178,7 @@ a:hover {
   height: 100vh;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .titre_page h1 {
@@ -275,6 +276,7 @@ a:hover {
 /*---------- Début À propos ----------*/
 .a_propos {
   margin-bottom: 150px;
+  margin-top: 20px;
 }
 
 .presentation {
