@@ -41,7 +41,7 @@ lettresPortfolio.forEach((letter) =>
 ));
 
 lettresPortfolio.forEach((letter) => 
-  letter.addEventListener("touchenter", function() {
+  letter.addEventListener("touchstart", function() {
     let randomI = Math.floor(Math.random() * colors.length);
     letter.style.color = colors[randomI];
   }
@@ -54,8 +54,9 @@ lettresPortfolio.forEach((letter) =>
   }
 ));
 
+
 lettresPortfolio.forEach((letter) => 
-  letter.addEventListener("touchleave", function() {
+  letter.addEventListener("touchend", function() {
     let randomI = Math.floor(Math.random() * colors.length);
     letter.style.color = colors[randomI];
   }
